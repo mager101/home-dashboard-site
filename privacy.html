@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy — Home Dashboard</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #fbfbfa;
+    --fg: #1a1a1e;
+    --muted: #5c5c66;
+    --line: #e3e3e0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131316;
+      --fg: #ececf0;
+      --muted: #9a9aa5;
+      --line: #2a2a30;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 44rem; margin: 0 auto; padding: 4rem 1.5rem 6rem; }
+  h1 { font-size: 1.9rem; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 0.4rem; }
+  .updated { color: var(--muted); font-size: 0.9rem; margin: 0 0 3rem; }
+  h2 { font-size: 1.05rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.75rem; }
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.25rem; }
+  li { margin-bottom: 0.4rem; }
+  code {
+    font: 0.9em ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    background: var(--line); padding: 0.1em 0.35em; border-radius: 3px;
+  }
+  footer {
+    margin-top: 4rem; padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    color: var(--muted); font-size: 0.9rem;
+  }
+  a { color: inherit; text-underline-offset: 3px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Privacy policy</h1>
+  <p class="updated">Home Dashboard · last updated September 2026</p>
+
+  <p>Home Dashboard is a private, self-hosted application used by one person for their own household. It has no other users, no sign-ups, and no hosted version. This policy describes what the application does with data, and in particular with data it reads from Google.</p>
+
+  <h2>Who runs it</h2>
+  <p>The application is built and operated by a single individual on hardware they own. There is no company, no team and no third-party operator.</p>
+
+  <h2>What data it handles</h2>
+  <ul>
+    <li>Financial records entered by the owner: transactions, budgets, categories and merchants.</li>
+    <li>Calendar entries, saved places and routes.</li>
+    <li>A personal media watch list.</li>
+    <li>Bank transaction alert emails read from the owner's own Gmail account, when that feature is enabled.</li>
+  </ul>
+
+  <h2>Google account data</h2>
+  <p>The application requests one Google scope, <code>gmail.readonly</code>, and only from the owner's own account.</p>
+  <p><strong>What it does with it.</strong> It periodically checks for new bank transaction alert emails, extracts the amount, merchant and timestamp, and stores those as pending entries for the owner to accept or reject. Messages that are not bank alerts are ignored and nothing is recorded about them.</p>
+  <p><strong>What it cannot do.</strong> The scope is read-only. The application cannot send email, cannot delete or modify email, cannot change mailbox settings, and has no access to any other Google service.</p>
+  <p><strong>Where it goes.</strong> Message contents are stored only in the owner's own database, on the owner's own server. Original message text is retained so that incorrectly read messages can be diagnosed and corrected.</p>
+
+  <h2>What it does not do</h2>
+  <ul>
+    <li>No data is sold, rented, shared or disclosed to anyone.</li>
+    <li>No data is transferred to any third party, and no third-party analytics, advertising or tracking is used.</li>
+    <li>No data is used to train any machine learning or artificial intelligence model.</li>
+    <li>There is no server operated by anyone other than the owner. Nothing is uploaded anywhere.</li>
+  </ul>
+  <p>Google user data is used solely to provide the transaction capture feature described above, consistent with the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</p>
+
+  <h2>Where data is stored, and for how long</h2>
+  <p>All data lives in a PostgreSQL database on the owner's own machine, on a private home network. It is retained for as long as the owner finds it useful and is deleted by the owner at will.</p>
+
+  <h2>Security</h2>
+  <p>The application runs on a private network and is not exposed to the public internet. Credentials are held in the server's environment rather than in the database. Access to the application requires a password.</p>
+
+  <h2>Revoking access</h2>
+  <p>Google access can be withdrawn at any time from <a href="https://myaccount.google.com/permissions">the Google account permissions page</a>. Revoking it stops the application reading any further mail immediately.</p>
+
+  <h2>Children</h2>
+  <p>The application is not directed at children and is not available to the public.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, the revised version will be posted on this page with an updated date.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy can be sent to the address shown on the application's Google consent screen.</p>
+
+  <footer>
+    <p><a href="./index.html">Home Dashboard</a></p>
+  </footer>
+</main>
+</body>
+</html>
